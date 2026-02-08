@@ -39,7 +39,7 @@ O projeto foi construído com foco em boas práticas de desenvolvimento, código
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Backend:**
   - **Java 21**
@@ -58,7 +58,7 @@ O projeto foi construído com foco em boas práticas de desenvolvimento, código
 
 ---
 
-## 🚀 Como Executar o Projeto
+##  Como Executar o Projeto
 
 A maneira mais recomendada de executar o projeto é utilizando Docker, pois ele configura todo o ambiente necessário (banco de dados e aplicação) automaticamente.
 
@@ -115,7 +115,7 @@ A aplicação estará disponível em `http://localhost:8080`.
 
 ---
 
-## 📋 Documentação da API
+##  Documentação da API
 
 A coleção do Postman com todos os endpoints pode ser encontrada no repositório (ou pode ser gerada/exportada).
 
@@ -138,7 +138,7 @@ A coleção do Postman com todos os endpoints pode ser encontrada no repositóri
 
 ---
 
-## 🚧 Status do Projeto
+##  Status do Projeto
 
 **Em Desenvolvimento.** O projeto está funcional, mas ainda há espaço para melhorias e novas funcionalidades.
 
