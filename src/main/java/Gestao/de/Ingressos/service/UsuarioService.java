@@ -35,7 +35,7 @@ public class UsuarioService {
 
         UsuarioEntity savedUser = repository.save(newUser);
         
-        // Envia email de boas-vindas
+
         emailService.sendWelcomeEmail(savedUser.getEmailUsuario(), savedUser.getNomeUsuario());
 
         return generateLoginResponse(savedUser);
@@ -70,7 +70,7 @@ public class UsuarioService {
 
         String token = UUID.randomUUID().toString();
         
-        // Envia email de recuperação
+
         emailService.sendPasswordRecoveryEmail(user.getEmailUsuario(), token);
     }
 

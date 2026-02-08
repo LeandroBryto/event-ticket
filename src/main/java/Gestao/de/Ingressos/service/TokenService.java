@@ -24,10 +24,10 @@ public class TokenService {
             return JWT.create()
                     .withIssuer("eventhub-api")
                     .withSubject(user.getEmailUsuario())
-                    .withClaim("id", user.getId())          // Adicionado ID
-                    .withClaim("nome", user.getNomeUsuario()) // Adicionado Nome
+                    .withClaim("id", user.getId())
+                    .withClaim("nome", user.getNomeUsuario())
                     .withClaim("role", user.getRole().name())
-                    .withExpiresAt(genExpirationDate(30)) // 30 minutos
+                    .withExpiresAt(genExpirationDate(30))
                     .sign(algorithm);
         } catch (JWTCreationException exception) {
             throw new RuntimeException("Erro ao gerar token", exception);
@@ -40,9 +40,9 @@ public class TokenService {
             return JWT.create()
                     .withIssuer("eventhub-api")
                     .withSubject(user.getEmailUsuario())
-                    .withClaim("id", user.getId())          // Adicionado ID também no refresh
+                    .withClaim("id", user.getId())
                     .withClaim("type", "refresh")
-                    .withExpiresAt(genExpirationDate(60 * 24)) // 24 horas
+                    .withExpiresAt(genExpirationDate(60 * 24))
                     .sign(algorithm);
         } catch (JWTCreationException exception) {
             throw new RuntimeException("Erro ao gerar refresh token", exception);

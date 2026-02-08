@@ -41,7 +41,7 @@ public class EmailService {
             helper.setText(htmlContent, true);
             mailSender.send(mimeMessage);
         } catch (MessagingException e) {
-            // Em um app real, aqui teríamos um log mais robusto (ex: log.error)
+
             System.err.println("Falha ao enviar email de boas-vindas para " + to + ": " + e.getMessage());
         }
     }

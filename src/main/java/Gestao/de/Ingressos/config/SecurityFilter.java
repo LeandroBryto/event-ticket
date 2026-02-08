@@ -44,11 +44,11 @@ public class SecurityFilter extends OncePerRequestFilter {
                     var authentication = new UsernamePasswordAuthenticationToken(user.getEmailUsuario(), null, authorities);
                     SecurityContextHolder.getContext().setAuthentication(authentication);
                 } else {
-                    // Token é válido, mas o usuário não existe mais no banco
+
                     response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                     response.setContentType("application/json");
                     response.getWriter().write("{\"error\": \"Usuário inválido ou não encontrado\"}");
-                    return; // Interrompe a requisição aqui
+                    return;
                 }
             }
         }

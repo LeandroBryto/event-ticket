@@ -51,11 +51,11 @@ public class VendaService {
             throw new RuntimeException("Não há ingressos suficientes para esta compra. Disponíveis: " + evento.getIngressosDisponiveis());
         }
 
-        // Baixa no estoque
+
         evento.setIngressosDisponiveis(evento.getIngressosDisponiveis() - data.getQuantidade());
         eventoRepository.save(evento);
 
-        // Cria a venda
+
         VendaEntity venda = new VendaEntity();
         venda.setComprador(comprador);
         venda.setDataVenda(LocalDateTime.now());
@@ -63,7 +63,6 @@ public class VendaService {
         
         VendaEntity savedVenda = vendaRepository.save(venda);
 
-        // Cria os ingressos
         List<IngressoEntity> ingressos = new ArrayList<>();
         for (int i = 0; i < data.getQuantidade(); i++) {
             IngressoEntity ingresso = new IngressoEntity();
