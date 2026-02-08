@@ -88,12 +88,12 @@ Crie um arquivo chamado `.env` na raiz do projeto com as seguintes variáveis de
 
 ```env
 # Credenciais do Email para o Docker
-MAIL_USERNAME=sistemanexusfinance@gmail.com
-MAIL_PASSWORD=wzosnkrmxtzcmily
+MAIL_USERNAME=
+MAIL_PASSWORD=
 
 # (Opcional) Você pode sobrescrever as credenciais do banco aqui também
-# SPRING_DATASOURCE_USERNAME=postgres
-# SPRING_DATASOURCE_PASSWORD=root
+# SPRING_DATASOURCE_USERNAME=
+# SPRING_DATASOURCE_PASSWORD=
 ```
 
 ### 3. Executando com Docker (Recomendado)
@@ -148,5 +148,4 @@ A coleção do Postman com todos os endpoints pode ser encontrada no repositóri
 
 **Leandro Brito**
 
-- [LinkedIn](https://www.linkedin.com/in/seu-linkedin/)
-- [GitHub](https://github.com/seu-usuario)
+
